@@ -1,6 +1,4 @@
-import { useRef, Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import Avatar from '@/components/canvas/Avatar';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/lib/animations';
 
@@ -73,14 +71,8 @@ const HomeSection = () => {
           animate="show"
           variants={fadeIn('left', 0.5)}
         >
-          <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full relative overflow-hidden">
-            <Suspense fallback={<div>Loading 3D Avatar...</div>}>
-              <Canvas dpr={[1, 2]}>
-                <Avatar position={[0, 0, 0]} />
-                <ambientLight intensity={0.6} />
-                <directionalLight position={[10, 10, 5]} intensity={0.8} />
-              </Canvas>
-            </Suspense>
+          <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full relative overflow-hidden bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center">
+            <div className="text-white text-4xl font-bold">JD</div>
           </div>
         </motion.div>
       </div>

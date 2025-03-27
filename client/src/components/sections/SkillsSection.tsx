@@ -1,18 +1,11 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/lib/animations';
-import { Canvas } from '@react-three/fiber';
-import SkillsVisualization from '@/components/canvas/SkillsVisualization';
 import ProgressBar from '@/components/ProgressBar';
 import { technicalSkills, technologies } from '@/lib/data';
 
 const SkillsSection = () => {
   const progressBarsRef = useRef<HTMLDivElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   return (
     <section id="skills" className="py-20 relative">
@@ -88,19 +81,18 @@ const SkillsSection = () => {
           </motion.div>
         </div>
         
-        {/* 3D Skills Visualization */}
+        {/* Skills Visualization Placeholder */}
         <motion.div 
-          className="mt-16 h-64 sm:h-80 rounded-2xl glassmorphism p-4 relative"
+          className="mt-16 h-64 sm:h-80 rounded-2xl glassmorphism p-4 relative flex items-center justify-center"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
           variants={fadeIn('up', 0.5)}
         >
-          {isMounted && (
-            <Canvas dpr={[1, 2]}>
-              <SkillsVisualization />
-            </Canvas>
-          )}
+          <div className="text-center">
+            <h3 className="text-xl font-semibold bg-gradient-to-r from-accent-purple to-accent-blue text-transparent bg-clip-text mb-2">Interactive Skills Visualization</h3>
+            <p className="text-text-dark">Coming soon with 3D visualization</p>
+          </div>
         </motion.div>
       </div>
     </section>
