@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="font-heading text-2xl font-bold">
-              <span className="text-accent-purple">John</span> <span className="text-white">Doe</span>
+              <span className="text-accent-purple">John</span> <span className="text-white">Kisinga</span>
             </h2>
             <p className="text-text-dark text-sm mt-1">
               Creative Developer & 3D Specialist
@@ -32,7 +32,7 @@ const Footer = () => {
         
         <div className="mt-8 text-center">
           <p className="text-text-dark text-sm">
-            &copy; {currentYear} John Doe. All rights reserved.
+            &copy; {currentYear} John Kisinga. All rights reserved.
           </p>
         </div>
       </div>

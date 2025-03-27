@@ -57,7 +57,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Endpoint to download CV
   app.get("/api/download-cv", (req: Request, res: Response) => {
     // In a real implementation, this would serve a real CV file
-    res.setHeader('Content-Disposition', 'attachment; filename="John_Doe_CV.pdf"');
+    res.setHeader('Content-Disposition', 'attachment; filename="John_Kisinga_CV.pdf"');
     res.setHeader('Content-Type', 'application/pdf');
     
     // For this example, we're just sending a placeholder text

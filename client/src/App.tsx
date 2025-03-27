@@ -12,11 +12,14 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 import NotFound from "@/pages/not-found";
+import { useTheme } from "@/hooks/useTheme";
 
 // Custom page component
 const HomePage = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="relative bg-gradient-to-b from-primary-dark to-secondary-dark">
+    <div className={`relative bg-gradient-to-b from-primary-dark to-secondary-dark ${theme}-mode`}>
       <ThemeToggle />
       <ScrollProgress />
       <Navigation />

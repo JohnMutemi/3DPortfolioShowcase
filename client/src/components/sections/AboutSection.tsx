@@ -17,7 +17,7 @@ const AboutSection = () => {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'John_Doe_CV.pdf';
+      a.download = 'John_Kisinga_CV.pdf';
       document.body.appendChild(a);
       a.click();
       
@@ -46,7 +46,7 @@ const AboutSection = () => {
             <div className="glassmorphism rounded-2xl p-4 relative z-10 card-3d-effect">
               <img 
                 src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=800" 
-                alt="John Doe" 
+                alt="John Kisinga" 
                 className="w-full h-auto rounded-xl"
               />
               <div className="absolute bottom-8 right-8 glassmorphism rounded-full p-4 shadow-neon">
@@ -82,7 +82,7 @@ const AboutSection = () => {
                   </div>
                   <div>
                     <h5 className="font-medium text-white">Name</h5>
-                    <p className="text-text-dark">John Doe</p>
+                    <p className="text-text-dark">John Kisinga</p>
                   </div>
                 </div>
                 
