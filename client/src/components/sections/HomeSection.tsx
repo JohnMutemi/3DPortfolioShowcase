@@ -17,7 +17,7 @@ const HomeSection = () => {
         >
           <h4 className="text-lg text-accent-pink font-mono mb-2">Hi there, I'm</h4>
           <h1 className="font-heading text-5xl md:text-7xl font-bold">
-            <span className="text-white block">John Doe</span>
+            <span className="text-white block">John Kisinga</span>
             <span className="bg-gradient-to-r from-accent-purple to-accent-pink text-transparent bg-clip-text typing-animation">
               Creative Developer
             </span>
@@ -72,7 +72,7 @@ const HomeSection = () => {
           variants={fadeIn('left', 0.5)}
         >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full relative overflow-hidden bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center">
-            <div className="text-white text-4xl font-bold">JD</div>
+            <div className="text-white text-4xl font-bold">JK</div>
           </div>
         </motion.div>
       </div>
