@@ -19,7 +19,7 @@ const HomePage = () => {
   const { theme } = useTheme();
   
   return (
-    <div className={`relative bg-gradient-to-b from-primary-dark to-secondary-dark ${theme}-mode`}>
+    <div className={`relative`}>
       <ThemeToggle />
       <ScrollProgress />
       <Navigation />
@@ -38,14 +38,16 @@ const HomePage = () => {
 };
 
 function App() {
+  const { theme } = useTheme();
+  
   return (
-    <>
+    <div className={`${theme}-mode`}>
       <Switch>
         <Route path="/" component={HomePage} />
         <Route component={NotFound} />
       </Switch>
       <Toaster />
-    </>
+    </div>
   );
 }
 

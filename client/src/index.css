@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-primary-dark text-white custom-scrollbar;
+    @apply font-sans antialiased custom-scrollbar;
   }
 
   html {
@@ -31,7 +31,15 @@
   }
 
   .glassmorphism {
-    @apply bg-secondary-dark/25 backdrop-blur-md border border-white/5;
+    @apply backdrop-blur-md border;
+  }
+  
+  .dark-mode .glassmorphism {
+    @apply bg-secondary-dark/25 border-white/5;
+  }
+  
+  .light-mode .glassmorphism {
+    @apply bg-secondary-light/25 border-black/5;
   }
 
   .card-3d-effect {
@@ -120,6 +128,8 @@
   --card: var(--secondary-dark);
   --card-foreground: var(--primary-light);
   --text: var(--text-dark);
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
 }
 
 /* Light mode colors */
@@ -129,6 +139,8 @@
   --card: var(--secondary-light);
   --card-foreground: var(--primary-dark);
   --text: var(--text-light);
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
 }
 
 /* Custom Typography */

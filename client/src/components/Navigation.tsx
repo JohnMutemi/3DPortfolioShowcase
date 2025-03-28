@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useScrollActive } from '@/hooks/useScrollActive';
+import { useTheme } from '@/hooks/useTheme';
 
 const navigation = [
   { id: 'home', label: 'Home', icon: 'fas fa-home' },
@@ -12,6 +13,7 @@ const navigation = [
 
 const Navigation = () => {
   const activeSection = useScrollActive();
+  const { theme } = useTheme();
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -33,7 +35,9 @@ const Navigation = () => {
           className={`nav-link ${
             activeSection === item.id
               ? 'text-accent-purple' 
-              : 'text-text-dark hover:text-white'
+              : theme === 'dark' 
+                ? 'text-text-dark hover:text-white' 
+                : 'text-text-light hover:text-primary-dark'
           } transition-all`}
         >
           <i className={`${item.icon} mr-2`}></i>
