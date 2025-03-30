@@ -6,37 +6,37 @@ export const services: Service[] = [
     title: 'Web Development',
     description: 'Building responsive, performant websites and web applications with modern frameworks and technologies.',
     icon: 'fas fa-laptop-code',
-    accentColor: 'purple',
+    accentColor: 'main',
   },
   {
     title: '3D Modeling',
     description: 'Creating immersive 3D models and environments for websites, games, and interactive experiences.',
     icon: 'fas fa-cube',
-    accentColor: 'pink',
+    accentColor: 'secondary',
   },
   {
     title: 'Game Development',
     description: 'Designing and developing engaging games with focus on graphics, performance and user experience.',
     icon: 'fas fa-gamepad',
-    accentColor: 'blue',
+    accentColor: 'tertiary',
   },
   {
     title: 'AR/VR Development',
     description: 'Creating augmented and virtual reality experiences for web and mobile platforms.',
     icon: 'fas fa-vr-cardboard',
-    accentColor: 'blue',
+    accentColor: 'main',
   },
   {
     title: 'Mobile App Development',
     description: 'Building cross-platform mobile applications with a focus on performance and user experience.',
     icon: 'fas fa-mobile-alt',
-    accentColor: 'pink',
+    accentColor: 'secondary',
   },
   {
     title: 'UI/UX Design',
     description: 'Creating intuitive, visually appealing interfaces and user experiences for web and mobile applications.',
     icon: 'fas fa-pencil-ruler',
-    accentColor: 'purple',
+    accentColor: 'tertiary',
   },
 ];
 
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     category: 'Web',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'purple',
+    accentColor: 'main',
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     category: 'Games',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'pink',
+    accentColor: 'secondary',
   },
   {
     id: 3,
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     category: 'Web',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'blue',
+    accentColor: 'tertiary',
   },
   {
     id: 4,
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     category: 'Web',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'purple',
+    accentColor: 'main',
   },
   {
     id: 5,
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     category: 'Mobile',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'pink',
+    accentColor: 'secondary',
   },
   {
     id: 6,
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     category: '3D',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'blue',
+    accentColor: 'tertiary',
   },
   {
     id: 7,
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     category: '3D',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'purple',
+    accentColor: 'main',
   },
   {
     id: 8,
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     category: 'Games',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'pink',
+    accentColor: 'secondary',
   },
   {
     id: 9,
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     category: 'Web',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    accentColor: 'blue',
+    accentColor: 'tertiary',
   },
 ];
 
@@ -157,22 +157,22 @@ export const technicalSkills: Skill[] = [
 export const technologies: TechnologyCategory[] = [
   {
     name: 'Frontend',
-    color: 'purple',
+    color: 'main',
     items: ['React', 'Vue.js', 'Angular', 'Tailwind CSS', 'SASS', 'TypeScript'],
   },
   {
     name: '3D & Visualization',
-    color: 'pink',
+    color: 'secondary',
     items: ['Three.js', 'WebGL', 'GSAP', 'Blender', 'Unity', 'A-Frame'],
   },
   {
     name: 'Backend',
-    color: 'blue',
+    color: 'tertiary',
     items: ['Node.js', 'Express', 'MongoDB', 'Firebase', 'SQL', 'GraphQL'],
   },
   {
     name: 'Tools & Others',
-    color: 'purple',
+    color: 'main',
     items: ['Git', 'Webpack', 'Docker', 'Figma', 'Adobe XD', 'Jest'],
   },
 ];

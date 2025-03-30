@@ -91,29 +91,36 @@
   }
   
   .shadow-neon {
-    box-shadow: 0 0 5px theme('colors.accent.purple'), 0 0 20px theme('colors.accent.purple');
+    box-shadow: 0 0 5px theme('colors.accent.main'), 0 0 20px theme('colors.accent.main');
   }
   
-  .shadow-neon-pink {
-    box-shadow: 0 0 5px theme('colors.accent.pink'), 0 0 20px theme('colors.accent.pink');
+  .shadow-neon-secondary {
+    box-shadow: 0 0 5px theme('colors.accent.secondary'), 0 0 20px theme('colors.accent.secondary');
   }
   
-  .shadow-neon-blue {
-    box-shadow: 0 0 5px theme('colors.accent.blue'), 0 0 20px theme('colors.accent.blue');
+  .shadow-neon-tertiary {
+    box-shadow: 0 0 5px theme('colors.accent.tertiary'), 0 0 20px theme('colors.accent.tertiary');
   }
 }
 
 /* Custom colors */
 :root {
-  --primary-dark: #121212;
-  --secondary-dark: #1E1E1E;
-  --primary-light: #F8F9FA;
-  --secondary-light: #E9ECEF;
-  --accent-purple: #7928CA;
-  --accent-pink: #FF0080;
-  --accent-blue: #00D8FF;
-  --text-dark: #ADB5BD;
-  --text-light: #212529;
+  /* Dark theme colors */
+  --primary-dark: #1c2331;
+  --secondary-dark: #2c3e50;
+  
+  /* Light theme colors */
+  --primary-light: #f5f7fa;
+  --secondary-light: #e9ecef;
+  
+  /* Accent colors - more muted and professional */
+  --accent-main: #3498db;
+  --accent-secondary: #16a085;
+  --accent-tertiary: #6c7c93;
+  
+  /* Text colors */
+  --text-dark: #b0bec5;
+  --text-light: #37474f;
   
   /* Font families */
   --font-sans: 'Inter', sans-serif;

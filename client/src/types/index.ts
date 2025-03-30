@@ -3,7 +3,7 @@ export interface Service {
   title: string;
   description: string;
   icon: string;
-  accentColor: 'purple' | 'pink' | 'blue';
+  accentColor: 'main' | 'secondary' | 'tertiary';
 }
 
 // Project type
@@ -16,7 +16,7 @@ export interface Project {
   category: 'Web' | '3D' | 'Games' | 'Mobile';
   liveUrl?: string;
   githubUrl?: string;
-  accentColor: 'purple' | 'pink' | 'blue';
+  accentColor: 'main' | 'secondary' | 'tertiary';
 }
 
 // Technical skill type
@@ -28,6 +28,6 @@ export interface Skill {
 // Technology category type
 export interface TechnologyCategory {
   name: string;
-  color: 'purple' | 'pink' | 'blue';
+  color: 'main' | 'secondary' | 'tertiary';
   items: string[];
 }

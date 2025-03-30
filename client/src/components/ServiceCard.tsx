@@ -10,7 +10,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ service, index }: ServiceCardProps) => {
   return (
     <motion.div 
-      className={`glassmorphism rounded-2xl p-6 transition-all hover:shadow-neon-${service.accentColor} card-3d-effect`}
+      className={`glassmorphism rounded-2xl p-6 transition-all hover:shadow-neon-${service.accentColor === 'main' ? '' : service.accentColor} card-3d-effect`}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}

@@ -33,7 +33,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 href={project.liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-text-dark hover:text-accent-purple transition-all"
+                className="text-text-dark hover:text-accent-main transition-all"
                 aria-label="View live project"
               >
                 <i className="fas fa-external-link-alt"></i>
@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 href={project.githubUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-text-dark hover:text-accent-purple transition-all"
+                className="text-text-dark hover:text-accent-main transition-all"
                 aria-label="View GitHub repository"
               >
                 <i className="fab fa-github"></i>

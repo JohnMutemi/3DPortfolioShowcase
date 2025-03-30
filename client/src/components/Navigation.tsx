@@ -34,7 +34,7 @@ const Navigation = () => {
           }}
           className={`nav-link ${
             activeSection === item.id
-              ? 'text-accent-purple' 
+              ? 'text-accent-main' 
               : theme === 'dark' 
                 ? 'text-text-dark hover:text-white' 
                 : 'text-text-light hover:text-primary-dark'
