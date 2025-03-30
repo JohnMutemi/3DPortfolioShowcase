@@ -17,8 +17,12 @@ const ScrollProgress = () => {
 
   return (
     <div 
-      className="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-main via-accent-secondary to-accent-tertiary z-50" 
-      style={{ width: `${scrollProgress}%` }}
+      className="fixed top-0 left-0 h-1.5 z-50 backdrop-blur-sm" 
+      style={{ 
+        width: `${scrollProgress}%`,
+        background: 'linear-gradient(90deg, rgba(52,152,219,0.9) 0%, rgba(22,160,133,0.9) 50%, rgba(108,124,147,0.9) 100%)',
+        boxShadow: '0 0 10px rgba(52,152,219,0.5)'
+      }}
     />
   );
 };

@@ -16,10 +16,12 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
       viewport={{ once: true, amount: 0.25 }}
       variants={fadeIn('up', 0.2 + index * 0.1)}
     >
-      <div className={`h-16 w-16 mb-6 rounded-xl bg-accent-${service.accentColor}/20 flex items-center justify-center`}>
-        <i className={`${service.icon} text-2xl text-accent-${service.accentColor}`}></i>
+      <div className={`h-16 w-16 mb-6 rounded-xl flex items-center justify-center bg-gradient-${service.accentColor} shadow-lg`}>
+        <i className={`${service.icon} text-2xl text-white`}></i>
       </div>
-      <h3 className="text-xl font-heading font-semibold mb-4">{service.title}</h3>
+      <h3 className={`text-xl font-heading font-semibold mb-4 text-gradient-${service.accentColor}`}>
+        {service.title}
+      </h3>
       <p className="text-text-dark">
         {service.description}
       </p>

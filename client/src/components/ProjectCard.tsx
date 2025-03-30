@@ -22,18 +22,25 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           alt={project.title} 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-dark to-transparent opacity-60"></div>
+        <div className={`absolute inset-0 bg-gradient-${project.accentColor} opacity-70`}></div>
+        <div className="absolute bottom-4 right-4">
+          <span className={`pill-badge bg-white/20 backdrop-blur-sm text-white font-bold`}>
+            {project.category}
+          </span>
+        </div>
       </div>
       <div className="p-6">
         <div className="flex justify-between items-start">
-          <h3 className="text-xl font-heading font-semibold">{project.title}</h3>
+          <h3 className={`text-xl font-heading font-semibold text-gradient-${project.accentColor}`}>
+            {project.title}
+          </h3>
           <div className="flex gap-2">
             {project.liveUrl && (
               <a 
                 href={project.liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-text-dark hover:text-accent-main transition-all"
+                className={`text-accent-${project.accentColor} hover:scale-110 transition-all`}
                 aria-label="View live project"
               >
                 <i className="fas fa-external-link-alt"></i>
@@ -44,7 +51,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 href={project.githubUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-text-dark hover:text-accent-main transition-all"
+                className={`text-accent-${project.accentColor} hover:scale-110 transition-all`}
                 aria-label="View GitHub repository"
               >
                 <i className="fab fa-github"></i>
@@ -59,7 +66,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           {project.technologies.map((tech, techIndex) => (
             <span 
               key={techIndex} 
-              className={`pill-badge bg-accent-${project.accentColor}/20 text-accent-${project.accentColor}`}
+              className={`pill-badge bg-gradient-${project.accentColor} text-white shadow-sm`}
             >
               {tech}
             </span>

@@ -31,7 +31,30 @@
   }
 
   .glassmorphism {
-    @apply backdrop-blur-md border;
+    @apply backdrop-blur-md border relative overflow-hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+  
+  .glassmorphism::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(45deg, 
+      rgba(52,152,219,0.3),
+      rgba(22,160,133,0.3),
+      rgba(108,124,147,0.3));
+    border-radius: inherit;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  .glassmorphism:hover::before {
+    opacity: 0.8;
   }
   
   .dark-mode .glassmorphism {
@@ -113,10 +136,17 @@
   --primary-light: #f5f7fa;
   --secondary-light: #e9ecef;
   
-  /* Accent colors - more muted and professional */
+  /* Accent colors - modern and professional */
   --accent-main: #3498db;
   --accent-secondary: #16a085;
   --accent-tertiary: #6c7c93;
+  
+  /* Gradient colors */
+  --gradient-main: linear-gradient(135deg, #3498db, #2980b9);
+  --gradient-secondary: linear-gradient(135deg, #16a085, #1abc9c);
+  --gradient-tertiary: linear-gradient(135deg, #6c7c93, #546e7a);
+  --gradient-dark: linear-gradient(135deg, #1c2331, #2c3e50);
+  --gradient-light: linear-gradient(135deg, #f5f7fa, #e9ecef);
   
   /* Text colors */
   --text-dark: #b0bec5;
@@ -161,4 +191,47 @@ h1, h2, h3, h4, h5, h6 {
 
 .font-heading {
   font-family: var(--font-heading);
+}
+
+/* Gradient Utilities */
+.bg-gradient-main {
+  background-image: var(--gradient-main);
+}
+
+.bg-gradient-secondary {
+  background-image: var(--gradient-secondary);
+}
+
+.bg-gradient-tertiary {
+  background-image: var(--gradient-tertiary);
+}
+
+.bg-gradient-dark {
+  background-image: var(--gradient-dark);
+}
+
+.bg-gradient-light {
+  background-image: var(--gradient-light);
+}
+
+/* Text gradients */
+.text-gradient-main {
+  background-image: var(--gradient-main);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-secondary {
+  background-image: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-tertiary {
+  background-image: var(--gradient-tertiary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
