@@ -29,12 +29,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
       
       await transporter.sendMail({
-        from: process.env.EMAIL_FROM || 'portfolio@example.com',
-        to: process.env.EMAIL_TO || 'john@example.com',
-        subject: `New message: ${validatedData.subject}`,
-        text: `Name: ${validatedData.name}\nEmail: ${validatedData.email}\nMessage: ${validatedData.message}`,
+        from: process.env.EMAIL_FROM || 'info@nexustech.solutions',
+        to: process.env.EMAIL_TO || 'info@nexustech.solutions',
+        subject: `New Business Inquiry: ${validatedData.inquiryType}`,
+        text: `Name: ${validatedData.name}\nEmail: ${validatedData.email}\nCompany: ${validatedData.company}\nInquiry Type: ${validatedData.inquiryType}\nMessage: ${validatedData.message}`,
         html: `<p><strong>Name:</strong> ${validatedData.name}</p>
                <p><strong>Email:</strong> ${validatedData.email}</p>
+               <p><strong>Company:</strong> ${validatedData.company}</p>
+               <p><strong>Inquiry Type:</strong> ${validatedData.inquiryType}</p>
                <p><strong>Message:</strong> ${validatedData.message}</p>`,
       });
       */
@@ -54,15 +56,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
-  // Endpoint to download CV
+  // Endpoint to download company brochure
   app.get("/api/download-cv", (req: Request, res: Response) => {
-    // In a real implementation, this would serve a real CV file
-    res.setHeader('Content-Disposition', 'attachment; filename="John_Kisinga_CV.pdf"');
+    // In a real implementation, this would serve a real company brochure file
+    res.setHeader('Content-Disposition', 'attachment; filename="NexusTech_Solutions_Brochure.pdf"');
     res.setHeader('Content-Type', 'application/pdf');
     
     // For this example, we're just sending a placeholder text
     // In a real implementation, you would serve an actual file
-    res.send("This is a placeholder for the actual CV file");
+    res.send("This is a placeholder for the actual company brochure file");
   });
   
   // ==================== AI Chatbot API Endpoints ====================
@@ -166,15 +168,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     const userContent = userMessage.content.toLowerCase();
     
     if (userContent.includes("hello") || userContent.includes("hi")) {
-      responseText = `Hello there! ${persona}`;
+      responseText = `Hello there! Welcome to NexusTech Solutions. ${persona} How can I assist you today?`;
     } else if (userContent.includes("help") || userContent.includes("guide")) {
-      responseText = `I'd be happy to help! ${persona} What specific assistance do you need?`;
-    } else if (userContent.includes("project") || userContent.includes("work")) {
-      responseText = `Let me tell you about my projects. I've worked on various technologies including React, Three.js, and Node.js.`;
+      responseText = `I'd be happy to help! ${persona} What specific assistance do you need with your business technology needs?`;
+    } else if (userContent.includes("project") || userContent.includes("work") || userContent.includes("service")) {
+      responseText = `NexusTech Solutions specializes in web applications, IoT solutions, AI implementation, and business process automation. Our team has expertise in a wide range of technologies to meet your business needs.`;
+    } else if (userContent.includes("iot") || userContent.includes("internet of things")) {
+      responseText = `Our IoT solutions connect your physical assets to digital systems, enabling real-time monitoring, predictive maintenance, and data-driven decision making. We work with a range of hardware including Raspberry Pi, Arduino, and industrial-grade sensors.`;
+    } else if (userContent.includes("ai") || userContent.includes("artificial intelligence") || userContent.includes("machine learning")) {
+      responseText = `NexusTech offers cutting-edge AI implementation services including natural language processing, computer vision, and predictive analytics. We help businesses automate processes, gain insights from data, and create intelligent customer experiences.`;
+    } else if (userContent.includes("web") || userContent.includes("website") || userContent.includes("application")) {
+      responseText = `Our web application development team creates responsive, scalable, and secure solutions using modern frameworks like React, Angular, and Node.js. We build everything from customer portals to enterprise resource planning systems.`;
+    } else if (userContent.includes("price") || userContent.includes("cost") || userContent.includes("quote")) {
+      responseText = `Our pricing is customized based on your specific needs. I recommend filling out our contact form with your project details, and our team will provide you with a detailed quote within 1-2 business days.`;
     } else if (userContent.includes("contact") || userContent.includes("email")) {
-      responseText = `You can contact me through the contact form on this website!`;
+      responseText = `You can contact our team through the business inquiry form on this website, or email us directly at info@nexustech.solutions.`;
     } else {
-      responseText = `Thank you for your message. ${persona} How else can I assist you today?`;
+      responseText = `Thank you for your message. ${persona} How else can I assist you with your technology needs today?`;
     }
     
     // Create and store the bot message

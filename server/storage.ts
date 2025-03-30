@@ -63,11 +63,11 @@ export class MemStorage implements IStorage {
   }
   
   private async initializeDefaultChatModes() {
-    // Portfolio Mode
+    // Solutions Mode
     await this.createChatMode({
-      name: "Portfolio",
-      description: "Learn about John's professional portfolio, projects, and expertise",
-      persona: "I'm John's portfolio assistant. I can tell you all about my projects, skills, and professional experience.",
+      name: "Solutions",
+      description: "Learn about NexusTech's services, solutions, and how we can help your business",
+      persona: "I'm a NexusTech Solutions representative. I can provide information about our services, success stories, and how we can help transform your business with our technology solutions.",
       icon: "💼",
       accentColor: "main",
       isDefault: 1
@@ -76,19 +76,19 @@ export class MemStorage implements IStorage {
     // Technical Mode
     await this.createChatMode({
       name: "Technical",
-      description: "Deep dive into technical details of John's work with 3D, React, and other technologies",
-      persona: "I'm a technical expert ready to discuss code, technologies, and implementation details of my projects. Ask me about React, Three.js, Express, or any other tech stack!",
+      description: "Discuss technical implementation details, technologies, and development approaches",
+      persona: "I'm a technical expert from NexusTech Solutions. I can discuss implementation details, technologies, development methodologies, and answer specific questions about our technical capabilities.",
       icon: "⚙️",
       accentColor: "secondary",
       isDefault: 0
     });
     
-    // Creative Mode
+    // Support Mode
     await this.createChatMode({
-      name: "Creative",
-      description: "Discuss John's creative process, 3D design philosophy, and artistic approach",
-      persona: "I represent John's creative side. I love discussing design principles, 3D modeling techniques, animation, and the creative process behind my work.",
-      icon: "🎨",
+      name: "Support",
+      description: "Get assistance with services, inquiries, and general support questions",
+      persona: "I'm a support specialist from NexusTech Solutions. I can help answer your questions about our services, guide you through the process of working with us, and address any support-related inquiries.",
+      icon: "🛠️",
       accentColor: "tertiary",
       isDefault: 0
     });
