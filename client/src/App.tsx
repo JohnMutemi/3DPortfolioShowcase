@@ -11,6 +11,7 @@ import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
+import ChatPage from "@/pages/ChatPage";
 import NotFound from "@/pages/not-found";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -44,6 +45,7 @@ function App() {
     <div className={`${theme}-mode`}>
       <Switch>
         <Route path="/" component={HomePage} />
+        <Route path="/chat" component={ChatPage} />
         <Route component={NotFound} />
       </Switch>
       <Toaster />
